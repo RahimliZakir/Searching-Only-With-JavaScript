@@ -54,6 +54,7 @@ $(document).ready(function () {
            <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
            <div class="card-body text-center">
                <h5 class="card-title">${item.title}</h5>
+               <p class="badge bg-success">${item.price.toFixed(3)}</p>
                <p class="card-text">
                ${item.description.substr(0, 75)}...
                </p>
@@ -82,6 +83,61 @@ $(document).ready(function () {
                <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
                <div class="card-body text-center">
                    <h5 class="card-title">${item.title}</h5>
+                   <p class="badge bg-success">${item.price.toFixed(3)}</p>
+                   <p class="card-text">
+                   ${item.description.substr(0, 75)}...
+                   </p>
+                   <a href="#" class="btn btn-primary">Id: ${item.id}</a>
+               </div>
+           </div>
+       </div>`;
+
+                $(row).append(card);
+            }
+            else if (item.description.toLowerCase().indexOf(searchText) != -1) {
+                let card = `<div class="col-4">
+           <div class="card" style="width: 18rem;">
+               <div class="img-div">
+               <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
+               <div class="card-body text-center">
+                   <h5 class="card-title">${item.title}</h5>
+                   <p class="badge bg-success">${item.price.toFixed(3)}</p>
+                   <p class="card-text">
+                   ${item.description.substr(0, 75)}...
+                   </p>
+                   <a href="#" class="btn btn-primary">Id: ${item.id}</a>
+               </div>
+           </div>
+       </div>`;
+
+                $(row).append(card);
+            }
+            else if (item.id.toString().indexOf(searchText) != -1) {
+                let card = `<div class="col-4">
+           <div class="card" style="width: 18rem;">
+               <div class="img-div">
+               <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
+               <div class="card-body text-center">
+                   <h5 class="card-title">${item.title}</h5>
+                   <p class="badge bg-success">${item.price.toFixed(3)}</p>
+                   <p class="card-text">
+                   ${item.description.substr(0, 75)}...
+                   </p>
+                   <a href="#" class="btn btn-primary">Id: ${item.id}</a>
+               </div>
+           </div>
+       </div>`;
+
+                $(row).append(card);
+            }
+            else if (item.price.toFixed(3).toString().indexOf(searchText) != -1) {
+                let card = `<div class="col-4">
+           <div class="card" style="width: 18rem;">
+               <div class="img-div">
+               <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
+               <div class="card-body text-center">
+                   <h5 class="card-title">${item.title}</h5>
+                   <p class="badge bg-success">${item.price.toFixed(3)}</p>
                    <p class="card-text">
                    ${item.description.substr(0, 75)}...
                    </p>
@@ -99,6 +155,7 @@ $(document).ready(function () {
                     <img src="assets/images/${item.imgUrl}" class="card-img-top" alt="Cars"></div>
                     <div class="card-body text-center">
                         <h5 class="card-title">${item.title}</h5>
+                        <p class="badge bg-success">${item.price.toFixed(3)}</p>
                         <p class="card-text">
                         ${item.description.substr(0, 75)}...
                         </p>
